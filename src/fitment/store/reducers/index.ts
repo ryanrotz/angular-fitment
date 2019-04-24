@@ -5,7 +5,7 @@
     The role of reducers is to deal with pure state and immutable objects
 */
 
-import { ActionReducerMap } from '@ngrx/store';
+import { ActionReducerMap, createFeatureSelector, createSelector } from '@ngrx/store';
 import * as fromVehicle from './vehicle.reducer';
 
 // Composing the parent state (FitmentState) that will encompass smaller chunks of state (vehicleState)
@@ -20,3 +20,13 @@ export interface FitmentState {
 export const reducers: ActionReducerMap<FitmentState> = {
   vehicle: fromVehicle.reducer
 }
+
+// Selectors
+export const getFitmentState = createFeatureSelector<FitmentState>('fitment');
+
+export const getVehicleState = createSelector(
+  getFitmentState,
+  (state: FitmentState) => state.vehicle
+)
+
+export const getAllYears = createSelector(getVehicleState, fromVehicle.getYears);

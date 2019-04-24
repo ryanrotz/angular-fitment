@@ -14,7 +14,7 @@ export interface VehicleState {
 }
 
 export const initialState: VehicleState = {
-  years: [],
+  years: ['2020', '2019', '2018', '2017'],
   loaded: false,
   loading: false
 }
@@ -50,3 +50,5 @@ export function reducer(
 
   return state;
 }
+
+export const getYears = (state: VehicleState) => state.years;
