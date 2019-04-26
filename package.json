@@ -17,7 +17,7 @@
     "@ngrx/store-devtools": "^7.4.0",
     "core-js": "^2.6.5",
     "ngrx-store-freeze": "^0.2.4",
-    "rxjs": "^6.4.0",
+    "rxjs": "^6.5.1",
     "zone.js": "^0.8.29"
   },
   "scripts": {

@@ -1,10 +1,11 @@
 import { Component, OnInit } from '@angular/core';
 import { Observable } from 'rxjs';
 import { Store } from '@ngrx/store';
-import * as fromStore from '../store';
 
-import { LoadYears } from '../store/actions/vehicle.action'
-import * as vehicleAction from '../store/actions/vehicle.action';
+// These are 3 different ways you can import actions
+import * as fromStore from '../store';
+// import * as vehicleAction from '../store/actions/vehicle.action';
+// import { LoadYears } from '../store/actions/vehicle.action'
 
 @Component({
   selector: 'app-fitment-container',
@@ -23,16 +24,13 @@ years$: Observable<any>;
 
   }
 
-  getAllVehicleYears(){
-    console.log('getYears')
+  selectVehicleFitment(){
 
-    this.store.dispatch(new LoadYears());
+    this.store.dispatch(new fromStore.LoadYears());
     // this.store.dispatch(new vehicleAction.LoadYears());
-    // this.store.dispatch(new fromStore.LoadYears());
+    // this.store.dispatch(new LoadYears());
 
     this.years$ = this.store.select(fromStore.getAllYears);
-
-    
     
   }
 

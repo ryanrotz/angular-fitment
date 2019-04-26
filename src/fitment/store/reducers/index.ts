@@ -21,7 +21,8 @@ export const reducers: ActionReducerMap<FitmentState> = {
   vehicle: fromVehicle.reducer
 }
 
-// Selectors
+
+// SELECTORS
 export const getFitmentState = createFeatureSelector<FitmentState>('fitment');
 
 export const getVehicleState = createSelector(

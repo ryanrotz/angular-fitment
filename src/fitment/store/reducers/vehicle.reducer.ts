@@ -14,7 +14,7 @@ export interface VehicleState {
 }
 
 export const initialState: VehicleState = {
-  years: ['2020', '2019', '2018', '2017'],
+  years: [],
   loaded: false,
   loading: false
 }
@@ -27,6 +27,7 @@ export function reducer(
   switch(action.type){
 
     case fromVehicle.LOAD_YEARS: {
+      console.log(action.type);
       return {
         ...state,
         loading: true
@@ -40,6 +41,8 @@ export function reducer(
       }
     }
     case fromVehicle.LOAD_YEARS_SUCCESS: {
+      console.log(action.type);
+      console.log(action.payload);
       return {
         ...state,
         loaded: true,
@@ -52,4 +55,5 @@ export function reducer(
   return state;
 }
 
+// Creating slices of state to be used by the selectors in /reducers/index.ts.
 export const getYears = (state: VehicleState) => state.years;

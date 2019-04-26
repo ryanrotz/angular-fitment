@@ -3,19 +3,19 @@ import { HttpClient } from '@angular/common/http';
 
 @Injectable()
 export class FitmentService {
-  
-  BASE_URL = 'https://whitelabeldev.tirebuyer.com/rest/v2/tirepros/fitments';
 
   constructor(
     private http: HttpClient
   ){}
 
-  // These APIs are here as an example. They won't work in Stackblitz
+  // These APIs are here as an example. They won't work in Stackblitz.
 
+  // BASE_URL = 'https://whitelabeldev.tirebuyer.com/rest/v2/tirepros/fitments';
+  
   // getYears = () => this.http.get(`${this.BASE_URL}/year`)
 
   // getMakes()
-  // https://whitelabeldev.tirebuyer.com/rest/v2/tirepros/fitments/make/?year=2015 <-- '2015' needs to be dynamic
+  // https://whitelabeldev.tirebuyer.com/rest/v2/tirepros/fitments/make/?year=2015 <-- '2015' needs to be dynamic. It needs to be passed into this function as an argument.
 
   // getModels()
   // https://whitelabeldev.tirebuyer.com/rest/v2/tirepros/fitments/model/?year=2015&make=Acura
@@ -35,8 +35,6 @@ getYears() {
   let obsv = this.http.get(fitmentUrl); 
   return obsv;
   };
-// just years - url: https://api.myjson.com/bins/fmwhg
-// whole object - url: https://api.myjson.com/bins/1ghf44
 
 /* Response:
 {

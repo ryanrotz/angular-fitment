@@ -1,5 +1,5 @@
 import { Action } from '@ngrx/store';
-// import model/interface from db.json here...
+// import model/interface for payload here...
 
 // Action constants
 export const LOAD_YEARS = '[Fitment] Load Years';
