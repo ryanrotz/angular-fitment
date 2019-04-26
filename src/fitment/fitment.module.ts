@@ -5,6 +5,8 @@ import { StoreModule } from '@ngrx/store';
 
 import { reducers } from './store'
 
+import { FitmentService}  from './services/fitment.service';
+
 import { FitmentContainerComponent } from './fitment-container/fitment-container.component';
 
 @NgModule({
@@ -13,6 +15,7 @@ import { FitmentContainerComponent } from './fitment-container/fitment-container
     StoreModule.forFeature('fitment', reducers),
   ],
   declarations: [FitmentContainerComponent],
+  providers: [FitmentService],
   exports: [FitmentContainerComponent]
 })
 export class FitmentModule { }
