@@ -10,7 +10,7 @@ Clicking the button on the home page fires an API call and returns a list of yea
 
 ## Task 1
 
-Style this list of years as a grid, similar to tirebuyer.com.
+Style this list of years as a grid, similar to tirebuyer.com, when you click on "Year," under "Enter your vehicle information."
 
 ## Task 2
 
