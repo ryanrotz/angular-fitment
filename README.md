@@ -14,9 +14,9 @@ Style this list of years as a grid, similar to tirebuyer.com, when you click on 
 
 ## Task 2
 
-Clicking on one of the years should append that value (e.g. "2015") to another API call, which will return a list of vehicle makes (Audi, Ford, Subaru, etc.). Display these in a similar grid format. 
+Clicking on one of the years should pass that value (e.g. "2015") to another API call, which will return a list of vehicle makes (Audi, Ford, Subaru, etc.). Display these in a similar grid format. 
 
-This Stackblitz uses dummy APIs which don't need params. However, please show how you would pass the params to the API call anyway.
+Note: This Stackblitz uses dummy APIs which don't actually need params to work. However, please show how you would pass the params to the API call anyway and console log the param.
 
 Repeat this process to also show vehicle model, trim, and options.
 

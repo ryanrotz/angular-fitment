@@ -8,28 +8,6 @@ export class FitmentService {
     private http: HttpClient
   ){}
 
-  // These APIs are here as an example. They won't work in Stackblitz.
-
-  // BASE_URL = 'https://whitelabeldev.tirebuyer.com/rest/v2/tirepros/fitments';
-  
-  // getYears = () => this.http.get(`${this.BASE_URL}/year`)
-
-  // getMakes()
-  // https://whitelabeldev.tirebuyer.com/rest/v2/tirepros/fitments/make/?year=2015 <-- '2015' needs to be dynamic. It needs to be passed into this function as an argument.
-
-  // getModels()
-  // https://whitelabeldev.tirebuyer.com/rest/v2/tirepros/fitments/model/?year=2015&make=Acura
-
-  // getTrims()
-  // https://whitelabeldev.tirebuyer.com/rest/v2/tirepros/fitments/trim/?year=2015&make=Acura&model=MDX
-
-  // getOptions()
-  //https://whitelabeldev.tirebuyer.com/rest/v2/tirepros/fitments/options/?year=2015&make=Acura&model=MDX&trim=FWD
-
-
-
-// Dummy APIs that do work in Stackblitz
-
 getYears() { 
   let fitmentUrl = 'https://api.myjson.com/bins/1ghf44';
   let obsv = this.http.get(fitmentUrl); 
@@ -45,7 +23,13 @@ getYears() {
 }
 */
 
-getMakes = () => this.http.get('https://api.myjson.com/bins/7amas');
+
+// This is an example of how the API would function in the real world:
+// https://website.com/fitments/make/?year=2015 <-- '2015' needs to be dynamic. It needs to be passed into this function as an argument. Show how you would do that here so that the year you clicked on would show up in the console log. For example, "year is 2015" 
+getMakes = (year: string) => {
+  console.log('year is ', year);
+  this.http.get('https://api.myjson.com/bins/7amas')
+  };
 /* Response:
 {
    "type" : "fitmentMakeResponse",
